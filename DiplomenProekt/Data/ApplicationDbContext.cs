@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,14 @@ namespace DiplomenProekt.Data
             
         }
 
-        
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<IdentityRole>(entity => entity.Property(x => x.Name).HasMaxLength(255));
+            builder.Entity<IdentityRole>(entity => entity.Property(x => x.NormalizedName).HasMaxLength(255));
+            builder.Entity<IdentityRole>(entity => entity.Property(x => x.Id).HasMaxLength(255));
+            builder.Entity<IdentityUser>(entity => entity.Property(x => x.Id).HasMaxLength(255));
+            base.OnModelCreating(builder);
+        }
+
     }
 }
