@@ -17,6 +17,81 @@ namespace DiplomenProekt.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.8");
 
+            modelBuilder.Entity("DiplomenProekt.Data.DbModels.Bungalo_statut", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Opisanie")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Bungala_statut");
+                });
+
+            modelBuilder.Entity("DiplomenProekt.Data.DbModels.Bungalo_tip", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Hladilnik")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<double>("Hora")
+                        .HasColumnType("double");
+
+                    b.Property<double>("Legla")
+                        .HasColumnType("double");
+
+                    b.Property<bool>("Sanitaren_vazel")
+                        .HasColumnType("tinyint(1)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tip_Bungala");
+                });
+
+            modelBuilder.Entity("DiplomenProekt.Data.DbModels.Legla_Bungala", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("Bungalo_tip_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Vid_leglo_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Bungalo_tip_id");
+
+                    b.HasIndex("Vid_leglo_id");
+
+                    b.ToTable("Legla_v_Bungala");
+                });
+
+            modelBuilder.Entity("DiplomenProekt.Data.DbModels.Vid_leglo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("Kapacitet")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Opisanie")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vidove_Legla");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -215,6 +290,25 @@ namespace DiplomenProekt.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("DiplomenProekt.Data.DbModels.Legla_Bungala", b =>
+                {
+                    b.HasOne("DiplomenProekt.Data.DbModels.Bungalo_tip", "Bungalo_Tip")
+                        .WithMany("Legla_Bungalas")
+                        .HasForeignKey("Bungalo_tip_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DiplomenProekt.Data.DbModels.Vid_leglo", "Vid_Leglo")
+                        .WithMany()
+                        .HasForeignKey("Vid_leglo_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bungalo_Tip");
+
+                    b.Navigation("Vid_Leglo");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -264,6 +358,11 @@ namespace DiplomenProekt.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("DiplomenProekt.Data.DbModels.Bungalo_tip", b =>
+                {
+                    b.Navigation("Legla_Bungalas");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "boxicons@2.0.9",
+      "destination": "wwwroot/lib/boxicons/"
+    },
+    {
+      "library": "@icon/icofont@1.0.1-alpha.1",
+      "destination": "wwwroot/lib/icon/icofont/"
+    }
+  ]
+}
