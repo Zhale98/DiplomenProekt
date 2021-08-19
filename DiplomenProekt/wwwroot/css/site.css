@@ -8,28 +8,52 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-.nav-menu {
-    scroll-behavior: smooth;
+
+
+
+.hero {
+    background-image: url('/img/13.jpg');
+    height: 1000px;
+    background-position: center;
+    text-shadow: 20px 20px green;
+    border-style: ridge;
+}
+
+.navbar_background {
+    background-color: rgb(2 2 141 / 0.60);
 }
 
 
-body {
-    scroll-behavior: smooth;
-    font-family: "Tinos", sans-serif;
-    color: #444444;
+.karta {
+    background-color:honeydew;
+    height: 1000px;
+    border-style: ridge;
+
+}
+.galeriq {
+    border-style: ridge;
+    color: #2c2c2c;
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+.informaciq {
+    text-indent: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:honeydew;
+    border-style: ridge;
+
+}
+.font-weight-bold {
+    color: #2c2c2c; 
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+.carousel-control-prev {
+    background-color: gainsboro;
 }
 
-a {
-    color: #67b0d1;
-}
-
-    a:hover {
-        color: #8ec4dd;
-        text-decoration: none;
-    }
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif;
+.carousel-control-next {
+    background-color: gainsboro;
 }
 
 /*--------------------------------------------------------------
@@ -408,24 +432,7 @@ h1, h2, h3, h4, h5, h6 {
             background: rgba(255, 255, 255, 0.15);
         }
 
-@media (min-width: 1024px) {
-    #hero {
-        background-attachment: fixed;
-    }
-}
 
-@media (max-width: 768px) {
-    #hero h1 {
-        font-size: 28px;
-        line-height: 36px;
-    }
-
-    #hero h2 {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 30px;
-    }
-}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -516,104 +523,8 @@ section {
         }
 }
 
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-.about {
-    background: url("../img/about-bg.jpg") center center no-repeat;
-    background-size: cover;
-    padding: 60px 0;
-    position: relative;
-}
 
-    .about::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: rgba(255, 255, 255, 0.75);
-        z-index: 9;
-    }
 
-    .about .container {
-        position: relative;
-        z-index: 10;
-    }
-
-    .about .content {
-        padding: 30px 30px 30px 0;
-    }
-
-        .about .content h3 {
-            font-weight: 700;
-            font-size: 34px;
-            color: #2f4d5a;
-            margin-bottom: 30px;
-        }
-
-        .about .content p {
-            margin-bottom: 30px;
-        }
-
-        .about .content .about-btn {
-            display: inline-block;
-            background: #67b0d1;
-            padding: 6px 44px 8px 30px;
-            color: #fff;
-            border-radius: 50px;
-            transition: 0.3s;
-            position: relative;
-        }
-
-            .about .content .about-btn i {
-                font-size: 18px;
-                position: absolute;
-                right: 18px;
-                top: 9px;
-            }
-
-            .about .content .about-btn:hover {
-                background: #7bbad7;
-            }
-
-    .about .icon-boxes .icon-box {
-        margin-top: 30px;
-    }
-
-        .about .icon-boxes .icon-box i {
-            font-size: 40px;
-            color: #67b0d1;
-            margin-bottom: 10px;
-        }
-
-        .about .icon-boxes .icon-box h4 {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-        }
-
-        .about .icon-boxes .icon-box p {
-            font-size: 15px;
-            color: #848484;
-        }
-
-@media (max-width: 1200px) {
-    .about .content {
-        padding-right: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .about {
-        text-align: center;
-    }
-}
-
-/*--------------------------------------------------------------
-# Karta
---------------------------------------------------------------*/
 .section {
     background: #e5eae2;
 }
@@ -1230,9 +1141,7 @@ section {
             font-size: 14px;
         }
 
-            .contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
-                background-color: #67b0d1;
-            }
+           
 
         .contact .php-email-form input {
             padding: 20px 15px;
@@ -1385,7 +1294,7 @@ section {
             background: #fff;
             padding: 6px 10px;
             position: relative;
-            border-radius: 4;
+           
         }
 
             #footer .footer-top .footer-newsletter form input[type="email"] {
@@ -1406,7 +1315,7 @@ section {
                 background: #67b0d1;
                 color: #fff;
                 transition: 0.3s;
-                border-radius: 4;
+                
             }
 
                 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {

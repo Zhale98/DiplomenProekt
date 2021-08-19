@@ -2,197 +2,224 @@
     ViewData["Title"] = "Home Page";
 }
 
-<header id="header" class="fixed-top header-transparent">
-    <div class="container d-flex align-items-center">
-
-        <div class="logo mr-auto">
-            <h1><a href="#"><img src="~/img/logo.png" alt="" class="img-fluid"></a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+@section header{
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar_background ">
+        <div class=" container">
+            <a class="navbar-brand" href="#">
+                <img src="~/img/logo.png" alt="" height="48" />
+                <span class="font-weight ml-2">РУ "АНГЕЛ КЪНЧЕВ"</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#hero">Начало <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#informaciq">Информация</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Почивни карти
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#karta">Карта</a>
+                            <a class="dropdown-item" href="#galeriq">Галерия</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Резервации
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Регистър</a>
+                            <a class="dropdown-item" href="#">Справка</a>
+                            <a class="dropdown-item" href="#">Архив</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#karta" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Опис бунгала
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#galeriq">Ценоразпис</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#informaciq">Смени</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Акаунти
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="galeriq">
+                            <a class="dropdown-item" href="#galeriq">Ц</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <nav class="nav-menu d-none d-lg-block ">
-            <ul>
-                <li class="active"><a href="index.html">Начало</a></li>
-                <li class="drop-down">
-                    <a class="nav-link scrollto" href="#karta">Почивни карти</a>
-                    <ul>
-                        <li><a href="#galeriq">Галерия</a></li>
-                    </ul>
-                <li><a href="#rezervacii">Резервации</a></li>
-                <li class="drop-down">
-                    <a href="#registur">Регистър</a>
-                    <ul>
-                        <li><a href="#spravka">Справка</a></li>
-                        <li><a href="#arhiv">Архив</a></li>
-                    </ul>
-                <li class="drop-down">
-                    <a href="#opis">Опис бунгала</a>
-                    <ul>
-                        <li><a href="#cenorazpis">Ценоразпис</a></li>
-                    </ul>
-                <li><a href="#smeni">Смени</a></li>
-                <li class="drop-down">
-                    <a href="#akaunti">Aкаунти</a>
-                    <ul>
-                        <li><a href="#nastroyki">Настройки акаунт</a></li>
-                    </ul>
-                </li>
+    </nav>
+   }
 
 
-            </ul>
-        </nav><!-- .nav-menu -->
-
-    </div>
-</header><!-- End Header -->
 <!-- ======= Hero Section ======= -->
-<section id="hero">
-    <div class="hero-container" data-aos="fade-up">
-        <h1> Почивна база "Шкорпиловци"</h1>
-        <h2>Природата винаги носи цветовете на духа. (Ралф Уолдо Емерсън)</h2>
-        <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+<section id="hero" class="hero" >
+    <div class="container h-100">
+        <div class="row col-12 h-50 align-items-center text-white text-lg-center" >
+            <div class="m-auto" >
+                <h1>Почивна база "Шкорпиловци"</h1>
+                <h2>Природата винаги носи цветовете на духа. (Ралф Уолдо Емерсън)</h2>
+</div>
+        </div>
     </div>
-</section><!-- End Hero -->
-<main id="main">
+
+
+</section>
+                
+<!-- End Hero -->
+
 
     <!-- ======= Karta Section ======= -->
     <section id="karta" class="karta">
-       
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="success"></div>
-                </div>
+
+        <div class="row h-25">
+            <div class="col-lg-12 ">
+                <div id="success"></div>
             </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <center> <img class="img-fluid " src="/img/Karta.jpg" ></center>
-                        <div class="panel-heading">
-
-                        </div>
-                        <div class="container">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- End .content-->
-
-    </section><!-- End Karta Section -->
-    <!-- ======= Galeriq Section ======= -->
-    <section id="galeriq" class="galeriq">
-        <center><p class="font-weight-bold">Галерия</p></center>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <center><img class="" src="/img/1.jfif" width="900" height="550" alt="First slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/4.jpg" width="900" height="550" alt="Second slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/6.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/9.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/7.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/26.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/25.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/22.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/16.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/11.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-                <div class="carousel-item">
-                    <center><img class="" src="/img/23.jpg" width="900" height="550" alt="Third slide"></center>
-                </div>
-
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true" button="dark"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-    </section>
-    <!-- End Galeriq Section -->
-    <!-- ======= Informaciq Section ======= -->
-    <section id="informaciq" class="informaciq">
-        <center><p class="font-weight-bold">Информация</p></center>
-        <p>Scroll to the top to hide the navbar.</p>
-        <p>
-            Намира се на 1,5 километра южно от град Обзор посока Бургас. Има поставени табели за лесна ориентация. Местността е гористо-тревиста. Плажът е изключително чист, спокоен и охраняем, на около 200 м от почивната база и не разполага с чадъри и шезлонги. До Обзор има крайбрежна пешеходна алея. Автогарата на града се намира на 1,8 км разстояние, а центърът на Обзор – на 2,2 км. Плажът Иракли е разположен на 8 км от комплекса. Почивна база BulMag е една звезда и е за всички, които искат да си изкарат страхотно край морето. Уют, спокойствие и релакс.</p>
-        </section>
 
-            <!-- ======= Footer ======= -->
-            <footer id="footer">
-                <div class="footer-top">
+        
+            <div class="col-lg-12 " >
+                <div class="panel panel-default img-fluid text-center ">
+                    <img src="/img/Karta.png" class="img-fluid" alt="Responsive image"> 
+                    <div class="panel-heading">
+
+                    </div>
                     <div class="container">
-                        <div class="row">
 
-                            <div class="col-lg-4 col-md-6">
-                                <div class="footer-info">
-                                    <h3>"Шкорпиловци"</h3>
-                                    <p class="pb-3"><em>Здравейте, винаги сме отворени за сътрудничество и предложения,свържете се с нас по един от начините по-долу.</em></p>
-                                    <p>
-                                        СБХА Шкорпиловци
-                                        9112 България<br><br>
-                                        <strong>Телефон:</strong> 088 242 3061<br>
-                                        <strong>Емайл:</strong> Sbhshkorpilovtsi@gmail.com<br>
-                                    </p>
-                                    <div class="social-links mt-3">
-                                        <a href="https://www.facebook.com/SBH.Shkorpilovtsi/?ref=page_internal" class="facebook"><i class="bx bxl-facebook"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+            </div>
+        <!-- End .content-->
+    </section><!-- End Karta Section -->
+<!-- ======= Galeriq Section ======= -->
+<section id="galeriq" class="galeriq bg-light">
+    <center><p class="font-weight-bold">ГАЛЕРИЯ</p></center>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <center><img class="" src="/img/1.jfif" width="900" height="550" alt="First slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/4.jpg" width="900" height="550" alt="Second slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/6.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/9.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/7.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/26.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/25.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/22.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/16.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/11.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
+            <div class="carousel-item">
+                <center><img class="" src="/img/23.jpg" width="900" height="550" alt="Third slide"></center>
+            </div>
 
-                            <div class="col-lg-2 col-md-6 footer-links">
-                                <h4>Полезно връзки</h4>
-                                <ul>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Начало</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Карта</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Относно нас</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="/Home/Privacy">Декларация за поверителност</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4 col-md-6 footer-newsletter">
-                                <h4>Бюлетин</h4>
-                                <p>
-                                    Въведете вашия емайл адрес по-долу,за да се абонирате за нашия бюлетин и бъдете в крак с офертите и специалните отстъпки
-                                </p>
-                                <form action="" method="post">
-                                    <input type="email" name="email"><input type="submit" value="Абонирай се">
-                                </form>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" button="dark"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<!-- End Galeriq Section -->
+<!-- ======= Informaciq Section ======= -->
+<section id="informaciq" class="informaciq">
+    <center><p class="font-weight-bold">ИНФОРМАЦИЯ</p></center>
+    <p>Почивна база</p>
+    <p>
+        Намира се на 1,5 километра южно от град Обзор посока Бургас. Има поставени табели за лесна ориентация. Местността е гористо-тревиста. Плажът е изключително чист, спокоен и охраняем, на около 200 м от почивната база и не разполага с чадъри и шезлонги. До Обзор има крайбрежна пешеходна алея. Автогарата на града се намира на 1,8 км разстояние, а центърът на Обзор – на 2,2 км. Плажът Иракли е разположен на 8 км от комплекса. Почивна база BulMag е една звезда и е за всички, които искат да си изкарат страхотно край морето. Уют, спокойствие и релакс.
+    </p>
+</section>
 
-                            </div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.1957991729987!2d27.889524415774726!3d42.95307810543626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a438e81e9f93c9%3A0x551a881aca3b89ab!2z0J_QvtGH0LjQstC90LAg0YHRgtCw0L3RhtC40Y8g0KjQutC-0YDQv9C40LvQvtCy0YbQuCAtINCg0YPRgdC10L3RgdC60Lgg0KPQvdC40LLQtdGA0YHQuNGC0LXRgiAi0JDQvdCz0LXQuyDQmtGK0L3Rh9C10LIiLyBIb2xpZGF5IEhvdXNlIG9mIFJ1c2UgVW5pdmVyc2l0eSAiQW5nZWwgS2FuY2hldiI!5e0!3m2!1sen!2sbg!4v1628515413230!5m2!1sen!2sbg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<!-- ======= Footer ======= -->
+@section footer{ 
+<section id="footer" class="footer">
+   
+        <div class="container">
+            <div class="row">
 
+                <div class="col-lg-4 col-md-6">
+                    
+                        <h3>"Шкорпиловци"</h3>
+                        <p class="pb-3"><em>Здравейте, винаги сме отворени за сътрудничество и предложения,свържете се с нас по един от начините по-долу.</em></p>
+                        <p>
+                            СБХА Шкорпиловци
+                            9112 България<br><br>
+                            <strong>Телефон:</strong> 088 242 3061<br>
+                            <strong>Емайл:</strong> Sbhshkorpilovtsi@gmail.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/SBH.Shkorpilovtsi/?ref=page_internal" class="facebook"><i class="bx bxl-facebook"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="copyright">
-                        &copy; Русенски Университет <strong><span>"Ангел Кънчев"</span></strong>.
-                    </div>
-                    <div class="credits">
-
-                    </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Полезно връзки</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Начало</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Карта</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Относно нас</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/Home/Privacy">Декларация за поверителност</a></li>
+                    </ul>
                 </div>
-            </footer><!-- End Footer -->
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Бюлетин</h4>
+                    <p>
+                        Въведете вашия емайл адрес по-долу,за да се абонирате за нашия бюлетин и бъдете в крак с офертите и специалните отстъпки
+                    </p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Абонирай се">
+                    </form>
+
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.1957991729987!2d27.889524415774726!3d42.95307810543626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a438e81e9f93c9%3A0x551a881aca3b89ab!2z0J_QvtGH0LjQstC90LAg0YHRgtCw0L3RhtC40Y8g0KjQutC-0YDQv9C40LvQvtCy0YbQuCAtINCg0YPRgdC10L3RgdC60Lgg0KPQvdC40LLQtdGA0YHQuNGC0LXRgiAi0JDQvdCz0LXQuyDQmtGK0L3Rh9C10LIiLyBIb2xpZGF5IEhvdXNlIG9mIFJ1c2UgVW5pdmVyc2l0eSAiQW5nZWwgS2FuY2hldiI!5e0!3m2!1sen!2sbg!4v1628515413230!5m2!1sen!2sbg" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+       </section>
+   }
+    <div class="container">
+        <div class="copyright">
+            &copy; Русенски Университет <strong><span>"Ангел Кънчев"</span></strong>.
+        </div>
+        <div class="credits">
+
+        </div>
+    </div>
+</><!-- End Footer -->
