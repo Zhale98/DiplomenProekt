@@ -33,8 +33,8 @@
 .galeriq {
     border-style: ridge;
     color: #2c2c2c;
-    letter-spacing: .05em;
-    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+    letter-spacing: .03em;
+    text-shadow: 4px 4px 0px #d5d5d5, 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .informaciq {
     text-indent: 50px;
@@ -50,11 +50,14 @@
 }
 .carousel-control-prev {
     background-color: gainsboro;
+    width: 50px;
 }
 
 .carousel-control-next {
     background-color: gainsboro;
+    width: 50px;
 }
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -1188,9 +1191,10 @@ section {
 --------------------------------------------------------------*/
 #footer {
     background: #263f49;
-    padding: 0 0 30px 0;
+    padding: 10px 0 30px 0;
     color: #fff;
     font-size: 14px;
+    border-style: ridge;
 }
 
     #footer .footer-top {
@@ -1324,13 +1328,13 @@ section {
 
     #footer .copyright {
         border-top: 1px solid #385b6b;
-        text-align: center;
-        padding-top: 30px;
+        text-align: inherit;
+        padding-top: 60px;
     }
 
     #footer .credits {
         padding-top: 10px;
-        text-align: center;
+        text-align: inherit;
         font-size: 13px;
         color: #fff;
     }
