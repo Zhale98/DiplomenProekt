@@ -3,8 +3,9 @@
 }
 
 @section header{
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar_background ">
-        <div class=" container">
+
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top   navbar_background ">
+        <div class=" container  ">
             <a class="navbar-brand" href="#">
                 <img src="~/img/logo.png" alt="" height="48" />
                 <span class="font-weight ml-2">РУ "АНГЕЛ КЪНЧЕВ"</span>
@@ -20,55 +21,30 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#informaciq">Информация</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="karti" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Почивни карти
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="karti">
-                            <a class="dropdown-item" href="#karta">Карта</a>
-                            <a class="dropdown-item" href="#galeriq">Галерия</a>
-                        </div>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#karta">Почивни карти</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="rezervacii" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Резервации
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="rezervacii">
-                            <a class="dropdown-item" href="/Home/Rezervacii">Резервирай</a>
-                            <a class="dropdown-item" href="#registur">Регистър</a>
-                            <a class="dropdown-item" href="#spravka">Справка</a>
-                            <a class="dropdown-item" href="#arhiv">Архив</a>
-                        </div>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#galeriq">Галерия</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="opis" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Опис бунгала
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="opis">
-                            <a class="dropdown-item" href="#cenorazpis">Ценоразпис</a>
-                        </div>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#grafik">График смени</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Home/Smeni">Смени</a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#footer">Контакти</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#akaunti" id="akaunti" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Акаунти
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="akaunti">
-                            <a class="dropdown-item" href="#">Настройки акаунт</a>
-                        </div>
-                    </li>
+
+
                 </ul>
             </div>
         </div>
-
+        <button type="button"  asp-action="rezervacii" asp-controller="home" class="btn btn-primary btn-sm">Резервирай</button>
     </nav>
 }
 
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero">
+<section id="hero" class="hero border border-secondary">
     <div class="container h-100">
         <div class="row col-12 h-50 align-items-center text-white text-lg-center">
             <div class="m-auto">
@@ -77,13 +53,11 @@
             </div>
         </div>
     </div>
-
-
 </section>
 
 <!-- End Hero -->
 <!-- ======= Karta Section ======= -->
-<section id="karta" class="karta border">
+<section id="karta" class="karta border border-secondary">
 
 
     <div class="row position-absolute">
@@ -107,7 +81,7 @@
     <!-- End .content-->
 </section><!-- End Karta Section -->
 <!-- ======= Galeriq Section ======= -->
-<section id="galeriq" class="galeriq bg-light border">
+<section id="galeriq" class="galeriq bg-light border border-secondary">
     <center><p class="font-weight-bold">ГАЛЕРИЯ</p></center>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -158,17 +132,91 @@
 </section>
 <!-- End Galeriq Section -->
 <!-- ======= Informaciq Section ======= -->
-<section id="informaciq" class="informaciq border border-danger">
+<section id="informaciq" class="informaciq border border-secondary">
     <center><p class="font-weight-bold">ИНФОРМАЦИЯ</p></center>
     <p>Почивна база</p>
     <p>
         Намира се на 1,5 километра южно от град Обзор посока Бургас. Има поставени табели за лесна ориентация. Местността е гористо-тревиста. Плажът е изключително чист, спокоен и охраняем, на около 200 м от почивната база и не разполага с чадъри и шезлонги. До Обзор има крайбрежна пешеходна алея. Автогарата на града се намира на 1,8 км разстояние, а центърът на Обзор – на 2,2 км. Плажът Иракли е разположен на 8 км от комплекса. Почивна база BulMag е една звезда и е за всички, които искат да си изкарат страхотно край морето. Уют, спокойствие и релакс.
     </p>
 </section>
+<!-- End Informaciq Section -->
 
+<!-- ====== Grafik Section ======= -->
+<section id="grafik" class="grafik border border-secondary ">
+    <center><p class="font-weight-bold">ГРАФИК СМЕНИ</p></center>
+    <div class=" table-active text-center ">
+        <table class="table table-bordered ">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Смени</th>
+                    <th scope="col">От</th>
+                    <th scope="col">До</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>I</td>
+                    <td>6\15\2021</td>
+                    <td>6\24\2021</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>II</td>
+                    <td>6\26\2021</td>
+                    <td>7\5\2021</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>III</td>
+                    <td>7\7\2021</td>
+                    <td>7\16\2021</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>IV</td>
+                    <td>7\18\2021</td>
+                    <td>7\27\2021</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>V</td>
+                    <td>7\29\2021</td>
+                    <td>8\7\2021</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>VI</td>
+                    <td>8\9\2021</td>
+                    <td>8\18\2021</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>VII</td>
+                    <td>8\20\2021</td>
+                    <td>8\29\2021</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>VIII</td>
+                    <td>8\31\2021</td>
+                    <td>9\9\2021</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>Извън сезона</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+</table>
+    </div>
+</section>
+<!-- End Grafik Section -->
 <!-- ======= Footer ======= -->
 
-<section id="footer" class="footer">
+<section id="footer" class="footer border border-secondary">
     <div class="footer-top">
         <div class="container">
             <div class="row">
@@ -205,15 +253,15 @@
 
                 </div>
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.1957991729987!2d27.889524415774726!3d42.95307810543626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a438e81e9f93c9%3A0x551a881aca3b89ab!2z0J_QvtGH0LjQstC90LAg0YHRgtCw0L3RhtC40Y8g0KjQutC-0YDQv9C40LvQvtCy0YbQuCAtINCg0YPRgdC10L3RgdC60Lgg0KPQvdC40LLQtdGA0YHQuNGC0LXRgiAi0JDQvdCz0LXQuyDQmtGK0L3Rh9C10LIiLyBIb2xpZGF5IEhvdXNlIG9mIFJ1c2UgVW5pdmVyc2l0eSAiQW5nZWwgS2FuY2hldiI!5e0!3m2!1sen!2sbg!4v1628515413230!5m2!1sen!2sbg" height="250" width="750"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.1957991729987!2d27.889524415774726!3d42.95307810543626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a438e81e9f93c9%3A0x551a881aca3b89ab!2z0J_QvtGH0LjQstC90LAg0YHRgtCw0L3RhtC40Y8g0KjQutC-0YDQv9C40LvQvtCy0YbQuCAtINCg0YPRgdC10L3RgdC60Lgg0KPQvdC40LLQtdGA0YHQuNGC0LXRgiAi0JDQvdCz0LXQuyDQmtGK0L3Rh9C10LIiLyBIb2xpZGF5IEhvdXNlIG9mIFJ1c2UgVW5pdmVyc2l0eSAiQW5nZWwgS2FuY2hldiI!5e0!3m2!1sen!2sbg!4v1628515413230!5m2!1sen!2sbg" height="250" width="750" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </div>
-<div class="container ">
-    <div class="copyright text-center">
-        &copy; Русенски Университет <strong><span>"Ангел Кънчев"</span></strong>.
-    </div>
+    <div class="container ">
+        <div class="copyright text-center">
+            &copy; Русенски Университет <strong><span>"Ангел Кънчев"</span></strong>.
+        </div>
 
-</div>
- </section>
+    </div>
+</section>

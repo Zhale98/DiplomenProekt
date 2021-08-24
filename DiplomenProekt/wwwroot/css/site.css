@@ -49,7 +49,9 @@
     background-color: gainsboro;
     width: 50px;
 }
-
+.grafik {
+    tab-size:4;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -136,10 +138,11 @@
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-.nav-menu, .nav-menu * {
+.nav-menu * {
     margin: 0;
     padding: 0;
     list-style: none;
+    
 }
 
     .nav-menu > ul > li {
