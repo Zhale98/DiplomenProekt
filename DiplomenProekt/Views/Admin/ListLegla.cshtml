@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DiplomenProekt.Data.DbModels.Vid_leglo>
+
+@{
+    ViewData["Title"] = "ListLegla";
+}
+
+<h1>ListLegla</h1>
+
+<p>
+    <a asp-action="AddLeglo">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kapacitet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Opisanie)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kapacitet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opisanie)
+            </td>
+            <td>
+                <a asp-action="EditLeglo" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

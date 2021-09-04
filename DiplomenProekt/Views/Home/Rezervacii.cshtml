@@ -1,5 +1,60 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@section header{
+@{
+    <form class="row gx-3 gy-2 align-items-center">
+        <div class="col-6">
+            <label class="visually-hidden" for="specificSizeInputName">Име</label>
+            <input type="text" class="form-control" id="specificSizeInputName" placeholder="Моля напишете името си">
+        </div>
+        <div class="col-6">
+            <label class="visually-hidden" for="specificSizeInputName">Фамилия</label>
+            <input type="text" class="form-control" id="specificSizeInputName" placeholder="Моля напишете фамилията си">
+        </div>
+        <div class="col-6">
+            <label class="visually-hidden" for="specificSizeInputName">Категория</label>
+            <input type="text" class="form-control" id="specificSizeInputName" placeholder="Моля изберете категория">
+        </div>
+        <div class="col-6">
+            <label class="visually-hidden" for="specificSizeInputName">Бунгало</label>
+            <input type="text" class="form-control" id="specificSizeInputName" placeholder="Моля изберете категория">
+        </div>
+
+        <div class="col-6">
+            <label class="visually-hidden" for="specificSizeSelect">Смяна</label>
+            <select class="form-select" id="specificSizeSelect">
+                <option selected>Избери...</option>
+                <option value="1">I</option>
+                <option value="2">II</option>
+                <option value="3">III</option>
+                <option value="4">IV</option>
+                <option value="5">V</option>
+                <option value="6">VI</option>
+                <option value="7">VII</option>
+                <option value="8">VIII</option>
+
+            </select>
+        </div>
+        <div class="col-6">
+            <label class="visually-hidden" for="specificSizeSelect">Дни</label>
+            <select class="form-select" id="specificSizeSelect">
+                <option selected>Избери...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+
+            </select>
+        </div>
+
+        <div class="col-6">
+            <button type="submit" class="btn btn-danger">Резервирай</button>
+        </div>
+    </form>
 }

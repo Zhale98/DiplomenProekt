@@ -29,6 +29,7 @@ namespace DiplomenProekt.Data
         public virtual DbSet<Legla_Bungala> Legla_v_Bungala { get; set; }
         public virtual DbSet<Bungalo_tip> Tip_Bungala { get; set; }
         public virtual DbSet<Bungalo_statut> Bungala_statut { get; set; }
+        public DbSet<DiplomenProekt.Data.DbModels.Rezervacii> Rezervacii { get; set; }
 
     }
 }

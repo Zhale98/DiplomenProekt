@@ -1,0 +1,64 @@
+﻿@model DiplomenProekt.Data.DbModels.Rezervacii
+
+@{
+    ViewData["Title"] = "EditReservation";
+}
+
+<h1>EditReservation</h1>
+
+<h4>Rezervacii</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditReservation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Smqna" class="control-label"></label>
+                <input asp-for="Smqna" class="form-control" />
+                <span asp-validation-for="Smqna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kategoriq" class="control-label"></label>
+                <input asp-for="Kategoriq" class="form-control" />
+                <span asp-validation-for="Kategoriq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dni" class="control-label"></label>
+                <input asp-for="Dni" class="form-control" />
+                <span asp-validation-for="Dni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Familiq" class="control-label"></label>
+                <input asp-for="Familiq" class="form-control" />
+                <span asp-validation-for="Familiq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bungalo" class="control-label"></label>
+                <input asp-for="Bungalo" class="form-control" />
+                <span asp-validation-for="Bungalo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cena" class="control-label"></label>
+                <input asp-for="Cena" class="form-control" />
+                <span asp-validation-for="Cena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListReservation">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
