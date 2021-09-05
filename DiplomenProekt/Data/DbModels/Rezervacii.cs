@@ -20,5 +20,8 @@ namespace DiplomenProekt.Data.DbModels
         public string Familiq { get; set; }
         public int Bungalo { get; set; }
         public int Cena { get; set; }
+        public int Dete_7 { get; set; }
+        public int Dete_10 { get; set; }
+        public int Dete_12 { get; set; }
     }
 }

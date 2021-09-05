@@ -3,14 +3,16 @@ using System;
 using DiplomenProekt.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DiplomenProekt.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210905124503_rezervacii")]
+    partial class rezervacii
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,15 +87,6 @@ namespace DiplomenProekt.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Cena")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Dete_10")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Dete_12")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Dete_7")
                         .HasColumnType("int");
 
                     b.Property<int>("Dni")
