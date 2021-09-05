@@ -42,14 +42,15 @@ namespace DiplomenProekt.Controllers
             
             return View();
         }
-        public IActionResult ListReservation()
+        public IActionResult ListReservacii()
         {
             List<Rezervacii> model = context.Rezervacii.ToList();
-            return View( model);
+            return View(model);
                 }
         public IActionResult EditReservation(int id)
         {
             Rezervacii model = context.Rezervacii.Find(id);
+
             return View(model);
         }
         [HttpPost]
@@ -65,7 +66,7 @@ namespace DiplomenProekt.Controllers
         {
             context.Rezervacii.Add(model);
             context.SaveChanges();
-            return RedirectToAction("ListReservation");
+            return RedirectToAction("ListReservacii");
         }
     }
 }

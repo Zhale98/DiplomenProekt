@@ -15,7 +15,7 @@ namespace DiplomenProekt.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
-                .HasAnnotation("ProductVersion", "5.0.8");
+                .HasAnnotation("ProductVersion", "5.0.9");
 
             modelBuilder.Entity("DiplomenProekt.Data.DbModels.Bungalo_statut", b =>
                 {
@@ -73,6 +73,38 @@ namespace DiplomenProekt.Data.Migrations
                     b.HasIndex("Vid_leglo_id");
 
                     b.ToTable("Legla_v_Bungala");
+                });
+
+            modelBuilder.Entity("DiplomenProekt.Data.DbModels.Rezervacii", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("Bungalo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Cena")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Dni")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Familiq")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Ime")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Kategoriq")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Smqna")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Rezervacii");
                 });
 
             modelBuilder.Entity("DiplomenProekt.Data.DbModels.Vid_leglo", b =>
