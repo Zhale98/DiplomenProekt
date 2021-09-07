@@ -1,0 +1,44 @@
+﻿@model DiplomenProekt.Data.DbModels.Smqna
+
+@{
+    ViewData["Title"] = "AddSmqna";
+}
+
+<h1>AddSmqna</h1>
+
+<h4>Smqna</h4>
+<hr />
+<div class="row">
+    <div class="bungalo_reserve_box">
+        <div class="col-md-12">
+            <form asp-action="AddSmqna">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="GetSmeni()" class="control-label">Смяна</label>
+                    <input asp-for="GetSmeni()" class="form-control" />
+                    <span asp-validation-for="GetSmeni()" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DateTime" class="control-label">Oт Дата</label>
+                    <input asp-for="DateTime" class="form-control" />
+                    <span asp-validation-for="DateTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label">До Дата</label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="ListSmqna">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

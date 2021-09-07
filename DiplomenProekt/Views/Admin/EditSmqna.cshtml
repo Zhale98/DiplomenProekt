@@ -1,0 +1,37 @@
+﻿@model DiplomenProekt.Data.DbModels.Smqna
+
+@{
+    ViewData["Title"] = "EditSmqna";
+}
+
+<h1>EditSmqna</h1>
+
+<h4>Smqna</h4>
+<hr />
+<div class="row">
+    <div class="bungalo_reserve_box">
+        <div class="col-lg-12">
+            <form asp-action="EditSmqna">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="GetSmeni()" class="control-label">Смени</label>
+                    <input asp-for="GetSmeni()" class="form-control" />
+                    <span asp-validation-for="GetSmeni()" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DateTime" class="control-label">Дата</label>
+                    <input asp-for="DateTime" class="form-control" />
+                    <span asp-validation-for="DateTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div>
+        <a asp-action="ListSmqna">Back to List</a>
+    </div>
+

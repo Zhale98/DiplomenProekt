@@ -1,0 +1,44 @@
+﻿@model IEnumerable<DiplomenProekt.Data.DbModels.Smqna>
+
+@{
+    ViewData["Title"] = "ListSmqna";
+}
+
+<h1>Smqna</h1>
+
+<p>
+    <a asp-action="AddSmqna">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Смяна</th>
+            <th>От Дата</th>
+            <th>До Дата</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var smqna in Model)
+        {
+            <tr>
+                <td>
+                    Smeni
+                </td>
+                <td>
+                    Datetime
+                </td>
+                <td>
+                    Date
+                </td>
+                <td>
+                    <a asp-action="EditSmqna" asp-route-id="">Edit</a> |
+                    <a asp-action="Details" asp-route-id="">Details</a> |
+                    <a asp-action="Delete" asp-route-id="">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

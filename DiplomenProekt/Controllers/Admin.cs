@@ -39,17 +39,34 @@ namespace DiplomenProekt.Controllers
         }
         public IActionResult AddReservation()
         {
-            
+
             return View();
         }
         public IActionResult ListReservacii()
         {
             List<Rezervacii> model = context.Rezervacii.ToList();
             return View(model);
-                }
+        }
         public IActionResult EditReservation(int id)
         {
             Rezervacii model = context.Rezervacii.Find(id);
+
+            return View(model);
+        }
+        public IActionResult AddSmqna()
+        {
+
+            return View();
+        }
+        public IActionResult ListSmqna()
+        {
+            List<Smqna> model = context.Smeni.ToList();
+
+            return View(model);
+        }
+        public IActionResult EditSmqna(int id)
+        {
+            Smqna model = context.Smeni.Find(id);
 
             return View(model);
         }
@@ -67,6 +84,13 @@ namespace DiplomenProekt.Controllers
             context.Rezervacii.Add(model);
             context.SaveChanges();
             return RedirectToAction("ListReservacii");
+        }
+        [HttpPost]
+        public IActionResult AddSmqna(Smqna model)
+        {
+            context.Smeni.Add(model);
+            context.SaveChanges();
+            return RedirectToAction("ListSmqna");
         }
     }
 }
